@@ -20,41 +20,108 @@
         </header>
 
         <main>
-            <section class="glass-card" id="ngos-section">
-                <h2>ONGs Parceiras</h2>
-                <div class="loader" id="loader-ngos"></div>
-                <div class="grid-list" id="ngos-list"></div>
+            <!-- Painel Superior (Métricas) -->
+            <section class="metrics-panel">
+                <div class="metric-card glass-card">
+                    <h3>Voluntários Ativos</h3>
+                    <div class="metric-value" id="count-volunteers">...</div>
+                </div>
             </section>
 
-            <section class="glass-card" id="donations-section">
-                <h2>Últimas Doações</h2>
-                <div class="loader" id="loader-donations"></div>
-                <div class="grid-list" id="donations-list"></div>
-            </section>
+            <div class="grid-layout">
+                <!-- Coluna 1: Cadastros -->
+                <div class="form-column">
+                    <section class="glass-card">
+                        <h2>Cadastrar Nova ONG</h2>
+                        <form id="ngo-form">
+                            <div class="input-group">
+                                <input type="text" id="n-name" placeholder=" " required>
+                                <label for="n-name">Nome da ONG</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="n-email" placeholder=" " required>
+                                <label for="n-email">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="n-cause" placeholder=" " required>
+                                <label for="n-cause">Causa (ex: Educação, Animal)</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="n-city" placeholder=" " required>
+                                <label for="n-city">Cidade</label>
+                            </div>
+                            <button type="submit" class="btn-glow" id="btn-submit-ngo">
+                                <span class="btn-text-ngo">Cadastrar ONG</span>
+                                <div class="spinner-ngo" style="display: none;"></div>
+                            </button>
+                            <div id="ngo-form-msg" class="msg-hidden"></div>
+                        </form>
+                    </section>
 
-            <section class="glass-card" id="volunteers-section">
-                <h2>Seja um Voluntário</h2>
-                <form id="volunteer-form">
-                    <div class="input-group">
-                        <input type="text" id="v-name" placeholder=" " required>
-                        <label for="v-name">Nome Completo</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" id="v-email" placeholder=" " required>
-                        <label for="v-email">Email</label>
-                    </div>
-                    <div class="input-group">
-                        <select id="v-ngo" required>
-                            <option value="" disabled selected>Selecione uma ONG</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-glow" id="btn-submit">
-                        <span class="btn-text">Cadastrar</span>
-                        <div class="spinner" style="display: none;"></div>
-                    </button>
-                    <div id="form-msg" class="msg-hidden"></div>
-                </form>
-            </section>
+                    <section class="glass-card">
+                        <h2>Seja um Voluntário</h2>
+                        <form id="volunteer-form">
+                            <div class="input-group">
+                                <input type="text" id="v-name" placeholder=" " required>
+                                <label for="v-name">Nome Completo</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="v-email" placeholder=" " required>
+                                <label for="v-email">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <select id="v-ngo" required>
+                                    <option value="" disabled selected>Selecione uma ONG</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-glow" id="btn-submit">
+                                <span class="btn-text">Cadastrar Voluntário</span>
+                                <div class="spinner" style="display: none;"></div>
+                            </button>
+                            <div id="form-msg" class="msg-hidden"></div>
+                        </form>
+                    </section>
+                    
+                    <section class="glass-card">
+                        <h2>Fazer Doação</h2>
+                        <form id="donation-form">
+                            <div class="input-group">
+                                <input type="text" id="d-name" placeholder=" " required>
+                                <label for="d-name">Nome do Doador</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" step="0.01" id="d-amount" placeholder=" " required>
+                                <label for="d-amount">Valor (R$)</label>
+                            </div>
+                            <div class="input-group">
+                                <select id="d-ngo" required>
+                                    <option value="" disabled selected>Selecione a ONG de destino</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-glow btn-green" id="btn-submit-donation">
+                                <span class="btn-text-donation">Doar Agora</span>
+                                <div class="spinner-donation" style="display: none;"></div>
+                            </button>
+                            <div id="donation-form-msg" class="msg-hidden"></div>
+                        </form>
+                    </section>
+                </div>
+
+                <!-- Coluna 2: Listas -->
+                <div class="list-column">
+                    <section class="glass-card" id="ngos-section">
+                        <h2>ONGs Parceiras</h2>
+                        <div class="loader" id="loader-ngos"></div>
+                        <div class="grid-list" id="ngos-list"></div>
+                    </section>
+
+                    <section class="glass-card" id="donations-section">
+                        <h2>Últimas Doações</h2>
+                        <div class="loader" id="loader-donations"></div>
+                        <div class="grid-list" id="donations-list"></div>
+                    </section>
+                </div>
+            </div>
         </main>
     </div>
 

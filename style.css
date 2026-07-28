@@ -25,6 +25,44 @@ body {
     position: relative;
 }
 
+/* Panel and Form Layouts */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.form-column, .list-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.metrics-panel {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.metric-card {
+    text-align: center;
+    padding: 1.5rem 3rem;
+}
+.metric-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+.btn-green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+.btn-green:hover {
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+}
+@media (max-width: 900px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
 .background-elements {
     position: fixed;
     top: 0;
