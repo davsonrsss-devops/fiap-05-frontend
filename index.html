@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolidaryTech - Hackathon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Solidary<span class="highlight">Tech</span></h1>
+            <p>Conectando ONGs, Doadores e Voluntários para um mundo melhor.</p>
+        </header>
+
+        <main>
+            <section class="glass-card" id="ngos-section">
+                <h2>ONGs Parceiras</h2>
+                <div class="loader" id="loader-ngos"></div>
+                <div class="grid-list" id="ngos-list"></div>
+            </section>
+
+            <section class="glass-card" id="donations-section">
+                <h2>Últimas Doações</h2>
+                <div class="loader" id="loader-donations"></div>
+                <div class="grid-list" id="donations-list"></div>
+            </section>
+
+            <section class="glass-card" id="volunteers-section">
+                <h2>Seja um Voluntário</h2>
+                <form id="volunteer-form">
+                    <div class="input-group">
+                        <input type="text" id="v-name" placeholder=" " required>
+                        <label for="v-name">Nome Completo</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="v-email" placeholder=" " required>
+                        <label for="v-email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <select id="v-ngo" required>
+                            <option value="" disabled selected>Selecione uma ONG</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-glow" id="btn-submit">
+                        <span class="btn-text">Cadastrar</span>
+                        <div class="spinner" style="display: none;"></div>
+                    </button>
+                    <div id="form-msg" class="msg-hidden"></div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
