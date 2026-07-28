@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://a41e7a32cf6d648fa883b64b27535598-1215733135.us-east-1.elb.amazonaws.com';
+const API_BASE_URL = 'http://ab50de13ee42b479292afe9129aafad1-88677664.us-east-1.elb.amazonaws.com';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadNGOs();
